@@ -7,7 +7,7 @@
     <groupId>com.cxytiandi</groupId>
     <artifactId>projects</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-
+    <packaging>pom</packaging>
     <modules>
         <module>sjdbc-db-read-write-sharding-springboot</module>
         <module>sjdbc-db-sharding-springboot</module>

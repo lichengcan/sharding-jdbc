@@ -1,5 +1,5 @@
-CREATE DATABASE `ds_0` CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
-CREATE DATABASE `ds_1` CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+CREATE DATABASE `ds_0` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci';
+CREATE DATABASE `ds_1` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci';
 
 CREATE TABLE `user_0`(
 	id bigint(64) not null,

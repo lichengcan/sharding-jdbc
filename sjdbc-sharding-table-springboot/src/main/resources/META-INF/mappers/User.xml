@@ -28,7 +28,7 @@
     </select>
     
     <select id="findByName" resultMap="baseResultMap">
-        SELECT u.* FROM user u WHERE u.name=#{name,jdbcType=VARCHAR}
+        SELECT u.* FROM user u WHERE u.name=#{name,jdbcType=VARCHAR} limit 1
     </select>
     
 </mapper>
