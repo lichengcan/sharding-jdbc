@@ -1,5 +1,7 @@
 package com.cxytiandi.sharding.controller;
 
+import com.cxytiandi.sharding.utils.IdGeneratorSnowflake;
+import org.apache.shardingsphere.core.strategy.keygen.SnowflakeShardingKeyGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,12 +22,15 @@ public class LouDongController {
 	public Object list() {
 		return louDongService.list();
 	}
-	
+
+	@Autowired
+	IdGeneratorSnowflake idGeneratorSnowflake;
+
 	@GetMapping("/ld/add")
 	public Object add() {
 		for (long i = 0; i < 10; i++) {
 			LouDong louDong = new LouDong();
-			louDong.setId(i+"a");
+			louDong.setId(idGeneratorSnowflake.snowflakeId().toString());
 			louDong.setCity("深圳");
 			louDong.setRegion("宝安");
 			louDong.setName("李四");
