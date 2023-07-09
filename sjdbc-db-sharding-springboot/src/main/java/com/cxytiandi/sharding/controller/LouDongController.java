@@ -22,6 +22,7 @@ public class LouDongController {
     @Autowired
     IdGeneratorSnowflake idGeneratorSnowflake;
 
+
     @PostMapping("/ld/add")
     public Object add() {
         for (long i = 0; i < 10; i++) {
